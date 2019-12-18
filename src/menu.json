@@ -1,0 +1,50 @@
+{
+    "menu": [
+        {
+            "id": 1,
+            "name": "行业统计",
+            "icon": "el-icon-data-line",
+            "children": [
+                {
+                    "name": "行业规模统计",
+                    "router": "/scaleStatistics"
+                },
+                {
+                    "name": "市场份额统计",
+                    "router": "/numStatistics"
+                },
+                {
+                    "name": "品牌对比统计",
+                    "router": "/brandComparisonStatistics"
+                },
+                {
+                    "name": "产品结构统计",
+                    "router": "/productStructureStatistics"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "商品统计",
+            "icon": "el-icon-goods",
+            "children": [
+                {
+                    "name": "商品型号统计",
+                    "router": "/modelStatistics"
+                },
+                {
+                    "name": "商品SKU统计",
+                    "router": "/SKUStatistics"
+                },
+                {
+                    "name": "商品波动统计",
+                    "router": "/waveStatistics"
+                },
+                {
+                    "name": "商品型号对比",
+                    "router": "/ModeComparison"
+                }
+            ]
+        }
+    ]
+}
