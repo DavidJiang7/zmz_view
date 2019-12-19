@@ -45,19 +45,5 @@ export default {
 	},
 	clear() {
 		localStorage.clear();
-	},
-	// sessionStorage
-	setSession: function (key, value) {
-		window.sessionStorage.setItem(key, JSON.stringify(value));
-	},
-	getSession: function (key) {
-		window.sessionStorage.getItem(key)
-	},
-	clearOneSession: function (key) {
-		// window.sessionStorage.getItem(key)
-	},
-	clearAllSession: function () {
-		window.sessionStorage.clear();
 	}
-
 }

@@ -5,8 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    pageIndexData: 1,
-    pageSizeData: 10
+    pageIndex: 1,
+    pageSize: 10
   },
   getters: {
 

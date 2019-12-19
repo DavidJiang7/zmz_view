@@ -6,11 +6,12 @@ Vue.use(Router)
 
 export default new Router({
   base: process.env.BASE_URL,
-  routes: [{
-      path: '/',
+  routes: [
+    {
+      path: '/index.html',
       name: 'index',
       component: index
-    },
+    }
   ],
 
 })
