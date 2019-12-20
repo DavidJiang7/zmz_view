@@ -1,5 +1,6 @@
 <template>
   <div class="index">
+    <div class="index-mask"></div>
     <div class="background">
       <div class="search common">
         <el-input
@@ -22,7 +23,7 @@
             </li>
           </ul>
           <div class="refresh_div">
-            <a class="refresh">换一批</a>
+            <a class="el-icon-refresh">换一批</a>
           </div>
         </div>
       </div>
@@ -56,6 +57,12 @@ export default {
   background: url("../assets/home_orignal.jpg");
   background-size: 100% 100%;
   background-position: center center;  
+  .index-mask {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
   .background {
     position: fixed;
     top: 0px;
@@ -91,6 +98,7 @@ export default {
           flex-wrap: wrap;
           .hot_item {
             width: 100px;
+            text-shadow: 0 0 16px rgba(0,0,0,1);
           }
         }
         .refresh_div {
