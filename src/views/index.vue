@@ -28,6 +28,7 @@
         </div>
       </div>
     </div>
+    <a :href="'/level.html'" class="egg"></a>
   </div>
 </template>
 
@@ -106,6 +107,15 @@ export default {
         }
       }
     }
+  }
+  .egg {
+    right: 0px;
+    bottom: 0px;
+    position: fixed;
+    color: #fff;
+    background: url("../assets/egg_blue.png");
+    width: 30px;
+    height: 30px;
   }
 }
 </style>
