@@ -50,8 +50,8 @@ export default {
 .index {
   width: 100%;
   height: 100%;
-  // min-width: 800px;
-  // min-height: 500px;
+  min-width: 1200px;
+  min-height: 700px;
   position: relative;
   background: url("../assets/home_orignal.jpg");
   background-size: 100% 100%;
