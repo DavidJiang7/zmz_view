@@ -17,7 +17,7 @@
       <div class="hot common">
         <div class="hot_div">
           <ul class="hot_ul">
-            <li class="hot_item" v-for="(item) in HotKey" :key="item">
+            <li class="hot_item" v-for="(item, index) in HotKey" :key="index + '-' + item">
               <a>{{item}}</a>
             </li>
           </ul>
@@ -50,8 +50,8 @@ export default {
 .index {
   width: 100%;
   height: 100%;
-  min-width: 1200px;
-  min-height: 720px;
+  // min-width: 800px;
+  // min-height: 500px;
   position: relative;
   background: url("../assets/home_orignal.jpg");
   background-size: 100% 100%;
@@ -92,6 +92,9 @@ export default {
           .hot_item {
             width: 100px;
           }
+        }
+        .refresh_div {
+          margin-top: 30px;
         }
       }
     }
