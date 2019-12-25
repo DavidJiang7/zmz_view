@@ -61,7 +61,7 @@ export default {
   min-width: 1200px;
   min-height: 700px;
   position: relative;
-  background: url("../../assets/list_small.jpg");
+  //background: url("../../assets/list_small.jpg");
   background-size: 100% 100%;
   background-position: center center;  
   .index-mask {

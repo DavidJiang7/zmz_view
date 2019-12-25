@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-    <a :href="'/level.html'" class="egg"></a>
+    <router-link to="level.html" class="egg"></router-link>
   </div>
 </template>
 
