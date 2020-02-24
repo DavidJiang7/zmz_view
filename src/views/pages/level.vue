@@ -22,9 +22,9 @@
         </ul>
       </div>
       <div class="item common">
-        <div v-for="item in data" :key="item.ResourceId" class="item_div" :style="{backgroundImage: 'url('+ item.ImgLink +')' }">
-            <span class="type">美剧</span>
-            <span class="level">E</span>
+        <div v-for="(item,index) in data" :key="index + '-' + item.ResourceId" class="item_div" :style="{backgroundImage: 'url('+ item.ImgLink +')' }">
+            <span class="type same">{{item.Channel == 'tv' ? '剧集' : '电影'}}</span>
+            <span class="level same">E级</span>
         </div>
       </div>
     </div>
@@ -36,6 +36,69 @@ export default {
   data() {
     return {
       data: [
+        {
+          ResourceId: 12321,
+          NameCN: '猎魔人',
+          ImgLink: 'http://tu.jstucdn.com/ftp/2019/1018/b_1a1aef6c8325c9d47f885130757cfc8d.jpg',
+          Score: 9.8,
+          Channel: 'tv',
+          Level: 'e',
+          ResourceType: '科幻/悬疑/惊悚',
+        },
+        {
+          ResourceId: 12321,
+          NameCN: '猎魔人',
+          ImgLink: 'http://tu.jstucdn.com/ftp/2019/1018/b_1a1aef6c8325c9d47f885130757cfc8d.jpg',
+          Score: 9.8,
+          Channel: 'tv',
+          Level: 'e',
+          ResourceType: '科幻/悬疑/惊悚',
+        },
+        {
+          ResourceId: 12321,
+          NameCN: '猎魔人',
+          ImgLink: 'http://tu.jstucdn.com/ftp/2019/1018/b_1a1aef6c8325c9d47f885130757cfc8d.jpg',
+          Score: 9.8,
+          Channel: 'tv',
+          Level: 'e',
+          ResourceType: '科幻/悬疑/惊悚',
+        },
+        {
+          ResourceId: 12321,
+          NameCN: '猎魔人',
+          ImgLink: 'http://tu.jstucdn.com/ftp/2019/1018/b_1a1aef6c8325c9d47f885130757cfc8d.jpg',
+          Score: 9.8,
+          Channel: 'tv',
+          Level: 'e',
+          ResourceType: '科幻/悬疑/惊悚',
+        },
+        {
+          ResourceId: 12321,
+          NameCN: '猎魔人',
+          ImgLink: 'http://tu.jstucdn.com/ftp/2019/1018/b_1a1aef6c8325c9d47f885130757cfc8d.jpg',
+          Score: 9.8,
+          Channel: 'tv',
+          Level: 'e',
+          ResourceType: '科幻/悬疑/惊悚',
+        },
+        {
+          ResourceId: 12321,
+          NameCN: '猎魔人',
+          ImgLink: 'http://tu.jstucdn.com/ftp/2019/1018/b_1a1aef6c8325c9d47f885130757cfc8d.jpg',
+          Score: 9.8,
+          Channel: 'tv',
+          Level: 'e',
+          ResourceType: '科幻/悬疑/惊悚',
+        },
+        {
+          ResourceId: 12321,
+          NameCN: '猎魔人',
+          ImgLink: 'http://tu.jstucdn.com/ftp/2019/1018/b_1a1aef6c8325c9d47f885130757cfc8d.jpg',
+          Score: 9.8,
+          Channel: 'tv',
+          Level: 'e',
+          ResourceType: '科幻/悬疑/惊悚',
+        },
         {
           ResourceId: 12321,
           NameCN: '猎魔人',
@@ -58,20 +121,19 @@ export default {
   font-size: 14px;
   width: 100%;
   height: 100%;
-  min-width: 1200px;
-  min-height: 700px;
+  //min-width: 1200px;
+  //min-height: 1000px;
   position: relative;
   //background: url("../../assets/list_small.jpg");
   background-size: 100% 100%;
   background-position: center center;  
-  .index-mask {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-  }
+  // .index-mask {
+  //   position: absolute;
+  //   height: 100%;
+  //   width: 100%;
+  //   background-color: rgba(0, 0, 0, 0.1);
+  // }
   .background {
-    position: fixed;
     top: 0px;
     left: 0px;
     color: #fff;
@@ -99,28 +161,35 @@ export default {
       }
     }
     .item {
-      height: 90%;
+      height: 90%;      
+      display: flex;
+      flex-wrap: wrap;
       .item_div {
+        margin: 10px;
         width: 220px;
         height: 300px;
-        //order-radius: 55px; //圆角
+        border-radius: 7px; //圆角
         color: #fff;
         background-repeat:no-repeat;
         background-size: cover;
         overflow: hidden;
+        .same {
+          margin-top: 5px;
+          height: 22px;
+          text-align: center;
+          width: 70px;
+        }
         .type {
           float: left;
-          // right: auto;
-          // bottom: auto;
-          // width: 70px;
-          // left: -24px;
-          // top: -4px;
-          transform: rotate(0deg);
-          //padding: 3px 0 14px 0;
+          transform: rotate(315deg);
+          margin-left: -20px;
+          background-color: cornflowerblue;
         }
         .level {
           float: right;
           transform: rotate(45deg);
+          margin-right: -20px;
+          background-color: lightslategray;
         }
       }
     }
